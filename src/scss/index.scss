@@ -21,12 +21,13 @@ code {
 }
 
 .todo {
+  position: relative;
   margin: 20rem auto;
   max-width: 60rem;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   padding: 3rem;
-  h1 {
+  h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1.6rem;
@@ -56,6 +57,28 @@ code {
       }
     }
   }
+  &__header {
+    .fa {
+      &-solid {
+        cursor: pointer;
+        background-color: white;
+        max-height: 2.4rem;
+        font-size: 2.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.6rem;
+        color: $secondary-color;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
 }
 .nav {
   display: flex;
@@ -70,12 +93,47 @@ code {
     align-items: center;
     justify-content: center;
     padding: 1.6rem 3.2rem;
+    &--refresh {
+      padding: 2rem 4rem;
+    }
     &--nav {
-      border: 1px solid white;
+      border: 1px solid $secondary-color;
+    }
+    &:hover {
+      border: 1px dotted rgb(122, 122, 122);
     }
   }
 }
-
+.todo-list-body {
+  padding: 3.6rem 0;
+  &__list {
+    li {
+      display: flex;
+      list-style: none;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      color: $primary-color;
+      .fa-circle {
+        color: $primary-color;
+        cursor: pointer;
+      }
+      .fa-circle-check {
+        cursor: pointer;
+        color: green;
+      }
+      .fa-trash-can {
+        cursor: pointer;
+        &:hover {
+          color: red;
+        }
+      }
+      .stroke {
+        text-decoration: line-through;
+        color: $secondary-color;
+      }
+    }
+  }
+}
 // .navbar {
 //   padding: 2rem;
 //   display: flex;
