@@ -13,7 +13,7 @@ const Todo = () => {
     <div className="container">
       <div className="todo">
         <div className="todo__header">
-          <h1> </h1>
+          {/* <h1>{Todo} </h1> */}
           <h2>What needs to be done?</h2>
           <button className="btn btn--refresh" onClick={resetTodoList}>
             <i className="fa-solid fa-arrows-rotate"></i>

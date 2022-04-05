@@ -122,14 +122,15 @@ code {
         color: green;
       }
       .fa-trash-can {
+        color: $primary-color;
         cursor: pointer;
         &:hover {
           color: red;
         }
       }
       .stroke {
-        text-decoration: line-through;
-        color: $secondary-color;
+        text-decoration: line-through !important;
+        color: $secondary-color !important;
       }
     }
   }
